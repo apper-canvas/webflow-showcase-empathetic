@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import ApperIcon from "@/components/ApperIcon";
+import { cn } from "@/utils/cn";
+import React from "react";
 
 const Logo = ({ className = "" }) => {
   return (
@@ -16,5 +18,6 @@ const Logo = ({ className = "" }) => {
   );
 };
 
-import { cn } from "@/utils/cn";
+};
+
 export default Logo;

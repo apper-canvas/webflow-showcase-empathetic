@@ -40,67 +40,82 @@ const GlassCard = ({ className = "", children, animate3d = true, enableFloatingA
         transformStyle: animate3d ? "preserve-3d" : "flat",
         perspective: animate3d ? "1000px" : "none",
       }}
+initial={{ opacity: 0, y: 20 }}
       animate={animate3d ? {
+        opacity: 1,
         rotateX: rotateX,
         rotateY: rotateY,
-        y: enableFloatingAnimation ? [0, -5, 0] : 0,
+        y: enableFloatingAnimation ? [0, -8, 0] : 0,
       } : enableFloatingAnimation ? {
-        y: [0, -5, 0],
-      } : {}}
+        opacity: 1,
+        y: [0, -8, 0],
+      } : { opacity: 1 }}
       transition={animate3d ? {
+        opacity: { duration: 0.6 },
         rotateX: { type: "spring", stiffness: 300, damping: 30 },
         rotateY: { type: "spring", stiffness: 300, damping: 30 },
-        y: enableFloatingAnimation ? { duration: 2, repeat: Infinity, ease: "easeInOut" } : {}
+        y: enableFloatingAnimation ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}
       } : enableFloatingAnimation ? {
-        y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-      } : {}}
-      whileHover={animate3d ? {
-        scale: 1.02,
-        boxShadow: "0 25px 50px -12px rgba(99, 102, 241, 0.25)",
+        opacity: { duration: 0.6 },
+        y: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+      } : { opacity: { duration: 0.6 } }}
+whileHover={animate3d ? {
+        scale: 1.03,
+        boxShadow: "0 30px 60px -12px rgba(99, 102, 241, 0.35)",
+        transition: { duration: 0.3 }
       } : {
-        scale: 1.02,
+        scale: 1.03,
+        transition: { duration: 0.3 }
       }}
     >
       {/* Animated background gradient */}
-      <motion.div 
+<motion.div 
         className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-30"
         animate={{
-          opacity: [0.3, 0.5, 0.3],
-          scale: [1, 1.05, 1],
+          opacity: [0.2, 0.6, 0.2],
+          scale: [1, 1.02, 1],
+          background: [
+            "linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05))",
+            "linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.05), rgba(99, 102, 241, 0.05))",
+            "linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.08))",
+            "linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.05))",
+          ]
         }}
         transition={{ 
-          duration: 4, 
+          duration: 5, 
           repeat: Infinity, 
           ease: "easeInOut" 
         }}
       />
       
       {/* Floating orb animations */}
-      <motion.div
+<motion.div
         className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 blur-sm"
         animate={{
-          x: [0, 10, 0],
-          y: [0, -5, 0],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute -bottom-4 -left-4 w-6 h-6 rounded-full bg-gradient-to-r from-secondary/20 to-accent/20 blur-sm"
-        animate={{
-          x: [0, -8, 0],
-          y: [0, 5, 0],
-          opacity: [0.4, 0.7, 0.4],
+          x: [0, 15, 0],
+          y: [0, -10, 0],
+          opacity: [0.2, 0.8, 0.2],
+          scale: [1, 1.2, 1],
         }}
         transition={{
           duration: 4,
           repeat: Infinity,
           ease: "easeInOut",
-          delay: 1,
+        }}
+      />
+<motion.div
+        className="absolute -bottom-4 -left-4 w-6 h-6 rounded-full bg-gradient-to-r from-secondary/20 to-accent/20 blur-sm"
+        animate={{
+          x: [0, -12, 0],
+          y: [0, 8, 0],
+          opacity: [0.3, 0.9, 0.3],
+          scale: [1, 1.3, 1],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1.5,
         }}
       />
       
