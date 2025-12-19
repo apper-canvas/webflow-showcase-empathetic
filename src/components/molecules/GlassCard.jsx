@@ -31,7 +31,7 @@ const GlassCard = ({ className = "", children, animate3d = false }) => {
   return (
     <motion.div
       ref={cardRef}
-      className={cn("glass-strong rounded-2xl p-8 relative overflow-hidden", className)}
+className={cn("glass-strong rounded-2xl p-6 relative overflow-hidden", className)}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -48,7 +48,7 @@ const GlassCard = ({ className = "", children, animate3d = false }) => {
         damping: 30,
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 opacity-50" />
+<div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-30" />
       <div className="relative z-10">{children}</div>
     </motion.div>
   );

@@ -60,42 +60,16 @@ const HeroSection = () => {
             className="relative"
           >
             <div className="relative w-full max-w-md mx-auto" style={{ perspective: "1000px" }}>
-<GlassCard animate3d={true} className="aspect-[1.6/1] flex flex-col justify-between p-6 relative overflow-hidden">
+<GlassCard animate3d={true} className="aspect-[3/4] flex flex-col justify-between p-6 relative overflow-hidden">
                 {/* Card Header */}
-                <div className="flex items-start justify-between">
-                  <div className="space-y-1">
-                    <div className="text-white/90 text-lg font-bold tracking-wide">T.RICKS</div>
-                    <div className="text-white/50 text-xs uppercase tracking-widest">Premium Card</div>
-                  </div>
-                  <div className="flex gap-2">
-                    <motion.div 
-                      className="w-10 h-7 rounded bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-sm border border-white/10"
-                      animate={{
-                        boxShadow: [
-                          "0 2px 10px rgba(255, 255, 255, 0.1)",
-                          "0 4px 20px rgba(99, 102, 241, 0.2)",
-                          "0 2px 10px rgba(255, 255, 255, 0.1)",
-                        ],
-                      }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    />
-                    <motion.div 
-                      className="w-10 h-7 rounded bg-gradient-to-br from-primary/30 to-accent/20 backdrop-blur-sm border border-white/10"
-                      animate={{
-                        boxShadow: [
-                          "0 2px 10px rgba(236, 72, 153, 0.1)",
-                          "0 4px 20px rgba(139, 92, 246, 0.2)",
-                          "0 2px 10px rgba(236, 72, 153, 0.1)",
-                        ],
-                      }}
-                      transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-                    />
-                  </div>
+                <div className="space-y-1">
+                  <div className="text-white/90 text-lg font-bold tracking-wide">T.RICKS</div>
+                  <div className="text-white/50 text-xs uppercase tracking-widest">Premium Card</div>
                 </div>
 
                 {/* Card Content */}
                 <div className="space-y-8 flex-1 flex flex-col justify-center">
-                  {/* Chip and Animation */}
+                  {/* Chip */}
                   <div className="flex items-center gap-4">
                     <motion.div
                       className="w-14 h-11 rounded-lg bg-gradient-to-br from-primary via-secondary to-accent relative"
@@ -105,30 +79,17 @@ const HeroSection = () => {
                           "0 8px 35px rgba(139, 92, 246, 0.6)",
                           "0 4px 25px rgba(236, 72, 153, 0.4)",
                         ],
-                        scale: [1, 1.05, 1],
                       }}
                       transition={{ duration: 2.5, repeat: Infinity }}
                     >
                       <div className="absolute inset-1 bg-black/20 rounded-md" />
                       <div className="absolute inset-2 bg-gradient-to-br from-white/10 to-transparent rounded-sm" />
                     </motion.div>
-                    <div className="space-y-3 flex-1">
-                      <motion.div 
-                        className="h-2.5 bg-gradient-to-r from-white/30 to-white/10 rounded-full w-4/5"
-                        animate={{ opacity: [0.6, 1, 0.6] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      />
-                      <motion.div 
-                        className="h-2 bg-gradient-to-r from-white/20 to-white/5 rounded-full w-3/5"
-                        animate={{ opacity: [0.4, 0.8, 0.4] }}
-                        transition={{ duration: 2.5, repeat: Infinity, delay: 0.3 }}
-                      />
-                    </div>
                   </div>
 
                   {/* Card Number */}
                   <motion.div 
-                    className="text-white/95 font-mono text-2xl tracking-[0.2em] font-light"
+                    className="text-white/95 font-mono text-xl tracking-[0.2em] font-light"
                     animate={{
                       textShadow: [
                         "0 0 10px rgba(255, 255, 255, 0.3)",
@@ -154,7 +115,7 @@ const HeroSection = () => {
                   </div>
                 </div>
 
-                {/* Enhanced Background Effects */}
+                {/* Background Effects */}
                 <motion.div 
                   className="absolute -inset-px bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl opacity-60 -z-10"
                   animate={{
@@ -162,17 +123,6 @@ const HeroSection = () => {
                   }}
                   transition={{ duration: 4, repeat: Infinity }}
                 />
-                <motion.div 
-                  className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl opacity-20 blur-xl -z-20"
-                  animate={{
-                    scale: [1, 1.05, 1],
-                    opacity: [0.15, 0.3, 0.15],
-                  }}
-                  transition={{ duration: 5, repeat: Infinity }}
-                />
-                
-                {/* Additional Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 rounded-2xl -z-5" />
               </GlassCard>
             </div>
 
