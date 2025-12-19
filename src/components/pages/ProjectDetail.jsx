@@ -74,7 +74,7 @@ const ProjectDetail = () => {
             />
           </div>
 
-          <GlassCard>
+<GlassCard animate3d={true} enableFloatingAnimation={true}>
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl font-bold text-white mb-4">About this project</h2>

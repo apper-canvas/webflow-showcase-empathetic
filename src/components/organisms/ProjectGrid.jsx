@@ -60,8 +60,8 @@ const ProjectGrid = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.Id} project={project} index={index} />
+{projects.map((project, index) => (
+            <ProjectCard key={project.Id} project={project} index={index} animate3d={true} />
           ))}
         </div>
       </div>

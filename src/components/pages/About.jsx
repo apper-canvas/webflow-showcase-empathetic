@@ -18,7 +18,7 @@ const About = () => {
             </p>
           </div>
 
-          <GlassCard>
+<GlassCard animate3d={true} enableFloatingAnimation={true}>
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">

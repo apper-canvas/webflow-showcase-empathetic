@@ -60,7 +60,11 @@ const Patreon = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <GlassCard className={tier.featured ? "ring-2 ring-primary" : ""}>
+<GlassCard 
+                  className={tier.featured ? "ring-2 ring-primary" : ""} 
+                  animate3d={true} 
+                  enableFloatingAnimation={tier.featured}
+                >
                   <div className="space-y-6">
                     {tier.featured && (
                       <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-primary to-accent text-white text-sm font-medium">
