@@ -15,9 +15,7 @@ const Logo = ({ className = "" }) => {
       </div>
       <span className="text-xl font-bold text-white">T.RICKS</span>
     </motion.div>
-  );
-};
-
+);
 };
 
 export default Logo;
