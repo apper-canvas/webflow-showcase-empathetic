@@ -1,0 +1,90 @@
+[
+  {
+    "Id": 1,
+    "title": "GSAP ScrollTrigger Tutorial",
+    "thumbnail": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80",
+    "viewCount": 2300,
+    "likeCount": 18,
+    "tags": ["animation", "tutorial", "gsap"],
+    "description": "Learn advanced scroll animations with GSAP ScrollTrigger",
+    "liveUrl": "https://youtube.com",
+    "featured": true
+  },
+  {
+    "Id": 2,
+    "title": "T.RICKS Menu + Slider",
+    "thumbnail": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80",
+    "viewCount": 1800,
+    "likeCount": 22,
+    "tags": ["interaction", "menu", "slider"],
+    "description": "Interactive menu design with smooth slider animations",
+    "liveUrl": "https://webflow.com",
+    "featured": true
+  },
+  {
+    "Id": 3,
+    "title": "T.RICKS Glassmorphism",
+    "thumbnail": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80",
+    "viewCount": 5100,
+    "likeCount": 41,
+    "tags": ["glassmorphism", "design", "tutorial"],
+    "description": "Complete guide to glassmorphism effects in Webflow",
+    "liveUrl": "https://webflow.com",
+    "featured": true
+  },
+  {
+    "Id": 4,
+    "title": "3D Card Interactions",
+    "thumbnail": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
+    "viewCount": 3200,
+    "likeCount": 28,
+    "tags": ["3d", "interaction", "cards"],
+    "description": "Create stunning 3D card hover effects",
+    "liveUrl": "https://codepen.io",
+    "featured": false
+  },
+  {
+    "Id": 5,
+    "title": "Parallax Hero Section",
+    "thumbnail": "https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=800&q=80",
+    "viewCount": 2800,
+    "likeCount": 19,
+    "tags": ["parallax", "hero", "animation"],
+    "description": "Build engaging parallax hero sections",
+    "liveUrl": "https://webflow.com",
+    "featured": false
+  },
+  {
+    "Id": 6,
+    "title": "Pricing Calculator",
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "viewCount": 1500,
+    "likeCount": 15,
+    "tags": ["calculator", "interactive", "pricing"],
+    "description": "Interactive pricing calculator with sliders",
+    "liveUrl": "https://webflow.com",
+    "featured": false
+  },
+  {
+    "Id": 7,
+    "title": "Dark Mode Toggle",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80",
+    "viewCount": 4200,
+    "likeCount": 35,
+    "tags": ["darkmode", "toggle", "animation"],
+    "description": "Smooth dark mode transitions with custom animations",
+    "liveUrl": "https://codepen.io",
+    "featured": false
+  },
+  {
+    "Id": 8,
+    "title": "Advanced Forms",
+    "thumbnail": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80",
+    "viewCount": 2100,
+    "likeCount": 17,
+    "tags": ["forms", "validation", "ux"],
+    "description": "Create beautiful forms with real-time validation",
+    "liveUrl": "https://webflow.com",
+    "featured": false
+  }
+]

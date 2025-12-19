@@ -1,0 +1,87 @@
+[
+  {
+    "Id": 1,
+    "name": "animation",
+    "category": "technique"
+  },
+  {
+    "Id": 2,
+    "name": "interaction",
+    "category": "technique"
+  },
+  {
+    "Id": 3,
+    "name": "interactive",
+    "category": "technique"
+  },
+  {
+    "Id": 4,
+    "name": "blur",
+    "category": "effect"
+  },
+  {
+    "Id": 5,
+    "name": "glass",
+    "category": "effect"
+  },
+  {
+    "Id": 6,
+    "name": "glassmorphism",
+    "category": "effect"
+  },
+  {
+    "Id": 7,
+    "name": "trend",
+    "category": "category"
+  },
+  {
+    "Id": 8,
+    "name": "trendy",
+    "category": "category"
+  },
+  {
+    "Id": 9,
+    "name": "udesign",
+    "category": "category"
+  },
+  {
+    "Id": 10,
+    "name": "hero",
+    "category": "section"
+  },
+  {
+    "Id": 11,
+    "name": "lander",
+    "category": "type"
+  },
+  {
+    "Id": 12,
+    "name": "homepage",
+    "category": "type"
+  },
+  {
+    "Id": 13,
+    "name": "animated",
+    "category": "technique"
+  },
+  {
+    "Id": 14,
+    "name": "3dtransforms",
+    "category": "technique"
+  },
+  {
+    "Id": 15,
+    "name": "timothytricks",
+    "category": "author"
+  },
+  {
+    "Id": 16,
+    "name": "anime",
+    "category": "library"
+  },
+  {
+    "Id": 17,
+    "name": "price-calculator",
+    "category": "component"
+  }
+]
