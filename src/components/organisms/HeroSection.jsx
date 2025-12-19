@@ -266,9 +266,8 @@ const HeroSection = () => {
                       delay: 2,
                     }}
                   />
-                </motion.div>
+</motion.div>
               </div>
-            </div>
             </div>
 
             <motion.div
