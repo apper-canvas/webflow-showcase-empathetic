@@ -60,70 +60,123 @@ const HeroSection = () => {
             className="relative"
           >
             <div className="relative w-full max-w-md mx-auto" style={{ perspective: "1000px" }}>
-<GlassCard animate3d={true} className="aspect-[3/4] flex flex-col justify-between p-6 relative overflow-hidden">
-                {/* Card Header */}
-                <div className="space-y-1">
-                  <div className="text-white/90 text-lg font-bold tracking-wide">T.RICKS</div>
-                  <div className="text-white/50 text-xs uppercase tracking-widest">Premium Card</div>
-                </div>
-
-                {/* Card Content */}
-                <div className="space-y-8 flex-1 flex flex-col justify-center">
-                  {/* Chip */}
-                  <div className="flex items-center gap-4">
-                    <motion.div
-                      className="w-14 h-11 rounded-lg bg-gradient-to-br from-primary via-secondary to-accent relative"
-                      animate={{
-                        boxShadow: [
-                          "0 4px 25px rgba(99, 102, 241, 0.4)",
-                          "0 8px 35px rgba(139, 92, 246, 0.6)",
-                          "0 4px 25px rgba(236, 72, 153, 0.4)",
-                        ],
-                      }}
-                      transition={{ duration: 2.5, repeat: Infinity }}
-                    >
-                      <div className="absolute inset-1 bg-black/20 rounded-md" />
-                      <div className="absolute inset-2 bg-gradient-to-br from-white/10 to-transparent rounded-sm" />
-                    </motion.div>
-                  </div>
-
-                  {/* Card Number */}
-                  <motion.div 
-                    className="text-white/95 font-mono text-xl tracking-[0.2em] font-light"
-                    animate={{
-                      textShadow: [
-                        "0 0 10px rgba(255, 255, 255, 0.3)",
-                        "0 0 20px rgba(99, 102, 241, 0.4)",
-                        "0 0 10px rgba(255, 255, 255, 0.3)",
-                      ],
-                    }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                    4323 7645 2826 0715
-                  </motion.div>
-                </div>
-
-                {/* Card Footer */}
-                <div className="flex items-center justify-between">
-                  <div className="space-y-1">
-                    <div className="text-white/40 text-[10px] uppercase tracking-wider font-medium">Valid Thru</div>
-                    <div className="text-white/90 font-mono text-lg tracking-widest">12/25</div>
-                  </div>
-                  <div className="text-right space-y-1">
-                    <div className="text-white/40 text-[10px] uppercase tracking-wider font-medium">CVV</div>
-                    <div className="text-white/90 font-mono text-lg tracking-widest">***</div>
-                  </div>
-                </div>
-
-                {/* Background Effects */}
+<div className="aspect-[5/3] w-full max-w-[400px] relative">
+                {/* Main card container with glassmorphism */}
                 <motion.div 
-                  className="absolute -inset-px bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl opacity-60 -z-10"
+                  className="relative w-full h-full rounded-2xl overflow-hidden"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.08)",
+                    backdropFilter: "blur(20px)",
+                    border: "1px solid rgba(255, 255, 255, 0.15)",
+                  }}
                   animate={{
-                    opacity: [0.4, 0.7, 0.4],
+                    boxShadow: [
+                      "0 8px 32px rgba(99, 102, 241, 0.2)",
+                      "0 12px 48px rgba(139, 92, 246, 0.3)",
+                      "0 8px 32px rgba(236, 72, 153, 0.2)",
+                    ],
                   }}
                   transition={{ duration: 4, repeat: Infinity }}
-                />
-              </GlassCard>
+                >
+                  {/* Animated gradient background */}
+                  <motion.div 
+                    className="absolute inset-0 opacity-60"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.4) 50%, rgba(236, 72, 153, 0.3) 100%)",
+                    }}
+                    animate={{
+                      opacity: [0.4, 0.7, 0.4],
+                    }}
+                    transition={{ duration: 5, repeat: Infinity }}
+                  />
+
+                  {/* Card content */}
+                  <div className="relative z-10 p-8 flex flex-col justify-between h-full">
+                    {/* Card Header */}
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-white text-xl font-bold tracking-wider">T.RICKS</div>
+                        <div className="text-white/60 text-sm uppercase tracking-widest mt-1">Premium Card</div>
+                      </div>
+                      
+                      {/* Card type indicator */}
+                      <div className="flex items-center gap-1">
+                        <div className="w-8 h-6 rounded bg-gradient-to-r from-primary to-secondary opacity-80" />
+                        <div className="w-8 h-6 rounded bg-gradient-to-r from-secondary to-accent opacity-80 -ml-2" />
+                      </div>
+                    </div>
+
+                    {/* Chip */}
+                    <div className="my-6">
+                      <motion.div
+                        className="w-16 h-12 rounded-lg relative"
+                        style={{
+                          background: "linear-gradient(135deg, rgba(255, 215, 0, 0.9) 0%, rgba(218, 165, 32, 0.9) 100%)",
+                          border: "1px solid rgba(255, 255, 255, 0.3)",
+                        }}
+                        animate={{
+                          boxShadow: [
+                            "0 2px 8px rgba(255, 215, 0, 0.3)",
+                            "0 4px 16px rgba(255, 215, 0, 0.5)",
+                            "0 2px 8px rgba(255, 215, 0, 0.3)",
+                          ],
+                        }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                      >
+                        {/* Chip pattern */}
+                        <div className="absolute inset-2 grid grid-cols-3 gap-1">
+                          {[...Array(9)].map((_, i) => (
+                            <div key={i} className="bg-black/20 rounded-sm" />
+                          ))}
+                        </div>
+                      </motion.div>
+                    </div>
+
+                    {/* Card Number */}
+                    <motion.div 
+                      className="text-white text-2xl font-mono tracking-[0.3em] font-light my-8"
+                      animate={{
+                        textShadow: [
+                          "0 0 10px rgba(255, 255, 255, 0.3)",
+                          "0 0 20px rgba(99, 102, 241, 0.5)",
+                          "0 0 10px rgba(255, 255, 255, 0.3)",
+                        ],
+                      }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                    >
+                      4323 7645 2826 0715
+                    </motion.div>
+
+                    {/* Card Footer */}
+                    <div className="flex items-end justify-between">
+                      <div>
+                        <div className="text-white/50 text-xs uppercase tracking-wider font-medium">Valid Thru</div>
+                        <div className="text-white text-lg font-mono tracking-wider mt-1">12/25</div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-white/50 text-xs uppercase tracking-wider font-medium">CVV</div>
+                        <div className="text-white text-lg font-mono tracking-wider mt-1">***</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Animated border glow */}
+                  <motion.div 
+                    className="absolute -inset-[1px] rounded-2xl opacity-50 -z-10"
+                    style={{
+                      background: "linear-gradient(45deg, rgba(99, 102, 241, 0.6), rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.6), rgba(99, 102, 241, 0.6))",
+                    }}
+                    animate={{
+                      rotate: [0, 360],
+                      opacity: [0.3, 0.7, 0.3],
+                    }}
+                    transition={{ 
+                      rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                      opacity: { duration: 3, repeat: Infinity }
+                    }}
+                  />
+                </motion.div>
+              </div>
             </div>
 
             <motion.div
